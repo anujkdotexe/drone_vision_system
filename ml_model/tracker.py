@@ -1,19 +1,15 @@
 import time
 
 class VisibilityTracker:
-    def __init__(self):
-        self.instances = {}
-        self.next_id = 1
-
-    def track(self, detection):
-        key = (detection["class_id"], detection["bbox"])
+    def __init__(self): self.instances = {}; self.counter=1
+    def track(self, det):
+        key = (det['class_id'], det['bbox'])
         if key not in self.instances:
-            self.instances[key] = {"id": self.next_id, "start": time.time()}
-            self.next_id += 1
-        return self.instances[key]["id"]
-
-    def get_visibility_duration(self, instance_id):
+            self.instances[key] = {'id':self.counter, 'start':time.time()}
+            self.counter +=1
+        return self.instances[key]['id']
+    def duration(self, inst_id):
         for v in self.instances.values():
-            if v["id"] == instance_id:
-                return round(time.time() - v["start"], 2)
+            if v['id']==inst_id:
+                return round(time.time()-v['start'],2)
         return 0

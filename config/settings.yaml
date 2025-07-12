@@ -1,14 +1,6 @@
 camera_id: 0
 model_path: yolov8n.pt
 mongo_uri: mongodb://localhost:27017
-
-
----
-
-## ✅ Final Step
-
-Once you copy this structure and code:
-```bash
-cd drone_vision_system
-pip install -r requirements.txt
-python main.py
+mongo_db: drone_vision
+mongo_coll: detections
+conf_thresh: 0.3

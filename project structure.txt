@@ -1,0 +1,38 @@
+drone_vision_system/
+├── camera/
+│   └── high_speed_stream.py
+│   └── frame_enhancer.py
+│   └── calibration.py
+│
+├── drone_data/
+│   └── telemetry.py
+│
+├── ml_model/
+│   ├── inference.py
+│   ├── model.py
+│   ├── tracker.py
+│   └── trainer.py
+│
+├── logger/
+│   └── db_logger.py
+│   └── data_logger.py
+│
+├── utils/
+│   └── helpers.py
+│   └── config_loaders.py
+│   └── __init__.py
+│
+├── actuator/
+│   └── target_engagement.py
+│
+├── config/
+│   └── settings.yaml
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── main.py
+├── requirements.txt
+├── .gitignore
+└── README.md

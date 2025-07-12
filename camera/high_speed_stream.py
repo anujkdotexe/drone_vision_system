@@ -9,7 +9,7 @@ class CameraStream:
     def read_frame(self):
         ret, frame = self.cap.read()
         if not ret:
-            raise RuntimeError("❌ Cannot read frame from camera.")
+            raise RuntimeError("Cannot read frame from camera.")
         return frame
 
     def release(self):
