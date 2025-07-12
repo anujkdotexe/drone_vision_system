@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 class MongoLogger:
-    def __init__(self, uri="mongodb://localhost:27017", db_name="drone_vision", collection="detections"):
+    def __init__(self, uri="mongodb://localhost:27017/drone_vision_system", db_name="drone_vision", collection="detections"):
         self.client = MongoClient(uri)
         self.collection = self.client[db_name][collection]
 
