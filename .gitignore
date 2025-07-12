@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Envs
+venv/
+env/
+.venv/
+.ENV/
+
+# Ultralytics + YOLO
+yolov8n.pt
+runs/
+.cache/
+weights/
+*.onnx
+*.tflite
+
+# Data & logs
+data/raw/
+*.jpg
+*.png
+*.avi
+*.mp4
+*.log
+*.db
+
+# Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# YOLO models and cache
+yolov8*.pt
+runs/
+.cache/
+
+# Media/data
+*.jpg
+*.png
+*.mp4
+*.avi
+data/
+
+# Logs
+*.log
+
+# IDE/editor
+.vscode/
+.idea/
