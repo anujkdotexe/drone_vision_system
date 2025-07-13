@@ -1,38 +1,27 @@
 drone_vision_system/
-├── camera/
-│   └── high_speed_stream.py
-│   └── frame_enhancer.py
-│   └── calibration.py
 │
-├── drone_data/
-│   └── telemetry.py
+├── camera/
+│   └── high_speed_stream.py         # Captures webcam stream
 │
 ├── ml_model/
-│   ├── inference.py
-│   ├── model.py
-│   ├── tracker.py
-│   └── trainer.py
+│   ├── inference.py                 # YOLOv8 inference + bbox calc
+│   ├── model.py                     # (Optional) for model save/load
+│   └── tracker.py                   # Tracks visibility duration
 │
 ├── logger/
-│   └── db_logger.py
-│   └── data_logger.py
+│   └── db_logger.py                 # Logs detection data to MongoDB
 │
 ├── utils/
-│   └── helpers.py
-│   └── config_loaders.py
-│   └── __init__.py
-│
-├── actuator/
-│   └── target_engagement.py
+│   └── helpers.py                   # Bounding box utils, timers, etc.
 │
 ├── config/
-│   └── settings.yaml
+│   └── settings.yaml                # All config (camera ID, thresholds, Mongo URI)
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   ├── raw/                         # Optional: raw frames for debug
+│   └── processed/                   # Optional: processed/annotated frames
 │
-├── main.py
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── main.py                          # Orchestrates the full pipeline
+├── requirements.txt                 # Package versions
+├── .gitignore                       # Ignore pycache, env, logs
+└── README.md                        # Project info
